@@ -34,6 +34,24 @@
       "revId": "2868ad383f04e4f96c34cc0b4601bacb994cbca1",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f03408f0_be19446e",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2019-04-01T14:21:32Z",
+      "side": 1,
+      "message": "Why don\u0027t you use stestr directly? That\u0027s what the project does in https://github.com/openstack/cinderlib/blob/master/tox.ini#L24",
+      "parentUuid": "a310ee02_58049bb7",
+      "revId": "2868ad383f04e4f96c34cc0b4601bacb994cbca1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
