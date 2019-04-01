@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52566bbb_f562dae7",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-04-01T17:57:18Z",
+      "side": 1,
+      "message": "actually this should not be needed for this package. cinderlib is only a library so it will be installed as a requirement for something probably. That *thing* which depends on cinderlib should have the right requirement on python2 or python3.\n\nAnyway, i will not block it because of this.",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 6
+      },
+      "revId": "ed62d9438a16a35af16850b07f031fa34357cf4c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec0a5ca_ce9f4082",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-04-01T17:57:18Z",
+      "side": 1,
+      "message": "Don\u0027t need this %files section, you can just remove it iirc",
+      "range": {
+        "startLine": 153,
+        "startChar": 0,
+        "endLine": 154,
+        "endChar": 11
+      },
+      "revId": "ed62d9438a16a35af16850b07f031fa34357cf4c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
