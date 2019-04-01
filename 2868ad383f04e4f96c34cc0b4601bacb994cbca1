@@ -52,6 +52,24 @@
       "revId": "2868ad383f04e4f96c34cc0b4601bacb994cbca1",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1abbd56e_1ca7cda9",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-01T14:35:44Z",
+      "side": 1,
+      "message": "It looks like it could have the same problem: https://github.com/mtreinish/stestr/blob/6ddb750955bbd739ec6fdd6b72e432df52f786b5/stestr/commands/run.py#L351\n\nI\u0027ll try it in case it works fine when doing discovery.",
+      "parentUuid": "f03408f0_be19446e",
+      "revId": "2868ad383f04e4f96c34cc0b4601bacb994cbca1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
