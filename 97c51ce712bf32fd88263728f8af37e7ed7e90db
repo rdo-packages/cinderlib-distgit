@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4910daa1_e6095904",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2019-04-01T12:56:23Z",
+      "side": 1,
+      "message": "These build requirements should depend on the pyver version.",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 34
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d5eda80_89dc0af0",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2019-04-01T12:56:23Z",
+      "side": 1,
+      "message": "This should also include %{pyver}. If the python2 version is named python-ddt and not python2-ddt, we can use the idea from https://github.com/rdo-packages/tooz-distgit/blob/rpm-master/python-tooz.spec#L62-L68",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 23
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8cc181fe_3d75f6a5",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2019-04-01T12:56:23Z",
+      "side": 1,
+      "message": "Should be %files -n python-%{pyver}-%{pypi_name}-tests-unit",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 145,
+        "endChar": 17
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f944530b_e70e9a1b",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2019-04-01T12:56:23Z",
+      "side": 1,
+      "message": "Should be %files -n python-%{pyver}-%{pypi_name}-tests-functional",
+      "range": {
+        "startLine": 149,
+        "startChar": 0,
+        "endLine": 149,
+        "endChar": 23
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "65757577_66081b0c",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2019-04-01T12:56:23Z",
+      "side": 1,
+      "message": "Should be %files -n python-%{pyver}-%{pypi_name}-tests",
+      "range": {
+        "startLine": 153,
+        "startChar": 7,
+        "endLine": 153,
+        "endChar": 12
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
