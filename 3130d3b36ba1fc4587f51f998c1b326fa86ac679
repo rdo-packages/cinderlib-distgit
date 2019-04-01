@@ -16,6 +16,24 @@
       "revId": "3130d3b36ba1fc4587f51f998c1b326fa86ac679",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e23da4c_0259e819",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-01T15:10:36Z",
+      "side": 1,
+      "message": "I checked before changing it and it\u0027s a requirement of oslotest [1], but it fails like patchset #7, so going back to #8 which worked fine.  :-)\n\n[1]: https://github.com/openstack/oslotest/blob/master/requirements.txt",
+      "parentUuid": "e35b4165_f29a0497",
+      "revId": "3130d3b36ba1fc4587f51f998c1b326fa86ac679",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
