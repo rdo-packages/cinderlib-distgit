@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44669424_a6b87989",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2019-04-01T13:20:51Z",
+      "side": 1,
+      "message": "This should be sphinx-build-%{pyver}",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 126,
+        "endChar": 12
+      },
+      "revId": "c4b18f8a5c8e35c8de50e9b4fff1d125d40c9c1c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
