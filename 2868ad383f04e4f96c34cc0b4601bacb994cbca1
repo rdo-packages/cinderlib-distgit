@@ -16,6 +16,24 @@
       "revId": "2868ad383f04e4f96c34cc0b4601bacb994cbca1",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a310ee02_58049bb7",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-01T14:17:04Z",
+      "side": 1,
+      "message": "I don\u0027t think that will work in this case because the code is calling it directly [1].\n\nI\u0027ll try to run it manually even if we reduce the concurrency to 1.\n\n\n[1]: https://github.com/openstack/os-testr/blob/master/os_testr/ostestr.py#L193",
+      "parentUuid": "b1b63c0f_194d95fc",
+      "revId": "2868ad383f04e4f96c34cc0b4601bacb994cbca1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
