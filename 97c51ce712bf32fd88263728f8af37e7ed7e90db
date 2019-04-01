@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "50b41641_b272498d",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-01T13:07:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4910daa1_e6095904",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 34
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d5eda80_89dc0af0",
         "filename": "python-cinderlib.spec",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "adbf8520_a26184f5",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-01T13:07:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d5eda80_89dc0af0",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 23
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8cc181fe_3d75f6a5",
         "filename": "python-cinderlib.spec",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2019-04-01T12:56:23Z",
       "side": 1,
       "message": "Should be %files -n python-%{pyver}-%{pypi_name}-tests-unit",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 145,
+        "endChar": 17
+      },
+      "revId": "97c51ce712bf32fd88263728f8af37e7ed7e90db",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "202c950a_6075fa53",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-01T13:07:55Z",
+      "side": 1,
+      "message": "Yup, CI caught this one and I changed it in the next patch, but I did it wrong, so I\u0027ll fix it now.",
+      "parentUuid": "8cc181fe_3d75f6a5",
       "range": {
         "startLine": 145,
         "startChar": 0,
