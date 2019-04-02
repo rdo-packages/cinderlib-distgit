@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "25087e2e_4e5d3c0f",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-02T09:45:05Z",
+      "side": 1,
+      "message": "You are probably right. I copied it from the oslo privsep spec thinking that since both are libraries, we should also have it here.",
+      "parentUuid": "52566bbb_f562dae7",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 6
+      },
+      "revId": "ed62d9438a16a35af16850b07f031fa34357cf4c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec0a5ca_ce9f4082",
         "filename": "python-cinderlib.spec",
         "patchSetId": 9
@@ -36,6 +60,30 @@
       "writtenOn": "2019-04-01T17:57:18Z",
       "side": 1,
       "message": "Don\u0027t need this %files section, you can just remove it iirc",
+      "range": {
+        "startLine": 153,
+        "startChar": 0,
+        "endLine": 154,
+        "endChar": 11
+      },
+      "revId": "ed62d9438a16a35af16850b07f031fa34357cf4c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f32e528_1881bcf1",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2019-04-02T09:45:05Z",
+      "side": 1,
+      "message": "I was getting errors without it.  I don\u0027t remember if it was on rpmbuild or rpmlint. That\u0027s why I ended up adding it.",
+      "parentUuid": "6ec0a5ca_ce9f4082",
       "range": {
         "startLine": 153,
         "startChar": 0,
