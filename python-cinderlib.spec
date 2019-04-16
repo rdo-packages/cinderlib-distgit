@@ -26,8 +26,8 @@ retyping, scheduling, backups, authorization, authentication, REST API, etc.
 
 Name:           python-%{pypi_name}
 Epoch:          1
-Version:        XXX
-Release:        XXX
+Version:        0.9.0
+Release:        1%{?dist}
 Summary:        %{common_summary}
 
 License:        ASL 2.0
@@ -154,3 +154,6 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %exclude /*
 
 %changelog
+* Tue Apr 16 2019 RDO <dev@lists.rdoproject.org> 1:0.9.0-1
+- Update to 0.9.0
+
