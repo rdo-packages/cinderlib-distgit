@@ -11,6 +11,8 @@
 # End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
+%global with_doc 1
+
 %global pypi_name cinderlib
 %global common_summary Python library for direct usage of Cinder drivers without the services
 %global common_desc \
@@ -61,6 +63,7 @@ BuildRequires:    python%{pyver}-oslotest
 %description -n python%{pyver}-%{pypi_name}
 %{common_desc}
 
+%if 0%{?with_doc}
 %package doc
 Summary:        Documentation for cinderlib
 
@@ -73,6 +76,7 @@ BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
 This package contains the documentation files for %{pypi_name}.
 
 %{common_desc}
+%endif
 
 %package -n python%{pyver}-%{pypi_name}-tests-unit
 Summary:        Cinderlib unit tests
@@ -122,10 +126,12 @@ rm -rf devstack playbooks tools
 %build
 %{pyver_build}
 
+%if 0%{?with_doc}
 # generate html docs
 sphinx-build-%{pyver} -b html doc/source doc/build/html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
+%endif
 
 %check
 %{pyver_bin} -m unittest2 discover -v -s cinderlib/tests/unit
@@ -138,9 +144,11 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %{pyver_sitelib}/cinderlib*
 %exclude %{pyver_sitelib}/%{pypi_name}/tests
 
+%if 0%{?with_doc}
 %files doc
 %license LICENSE
 %doc doc/build/html
+%endif
 
 %files -n python%{pyver}-%{pypi_name}-tests-unit
 %license LICENSE
