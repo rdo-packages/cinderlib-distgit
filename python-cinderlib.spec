@@ -71,6 +71,7 @@ BuildRequires:  graphviz
 BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-openstackdocstheme
 BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
+BuildRequires:  python%{pyver}-sphinxcontrib-rsvgconverter
 
 %description doc
 This package contains the documentation files for %{pypi_name}.
