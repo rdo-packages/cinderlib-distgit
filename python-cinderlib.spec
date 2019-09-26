@@ -163,3 +163,4 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %exclude /*
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/cinderlib/commit/?id=5e6ecdd8585adb8eb205c5a48ab39d79ab8220b6
