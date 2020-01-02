@@ -28,7 +28,7 @@ retyping, scheduling, backups, authorization, authentication, REST API, etc.
 
 Name:           python-%{pypi_name}
 Epoch:          1
-Version:        1.0.0
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        %{common_summary}
 
@@ -163,6 +163,9 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %exclude /*
 
 %changelog
+* Thu Jan 02 2020 RDO <dev@lists.rdoproject.org> 1:1.0.1-1
+- Update to 1.0.1
+
 * Thu Dec 12 2019 RDO <dev@lists.rdoproject.org> 1:1.0.0-1
 - Update to 1.0.0
 
