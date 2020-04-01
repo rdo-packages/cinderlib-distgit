@@ -47,7 +47,7 @@ Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 %endif
 
 Requires:       python%{pyver}-pbr
-Requires:       openstack-cinder >= 12.0.0
+Requires:       openstack-cinder >= 15.0.0
 Requires:       sudo
 
 BuildRequires:  git
