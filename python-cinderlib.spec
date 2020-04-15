@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global with_doc 1
@@ -39,28 +28,26 @@ BuildArch:      noarch
 %description
 %{common_desc}
 
-%package -n python%{pyver}-%{pypi_name}
+%package -n python3-%{pypi_name}
 Summary:        %{common_summary}
-%{?python_provide:%python_provide python%{pyver}-%{pypi_name}}
-%if %{pyver} == 3
+%{?python_provide:%python_provide python3-%{pypi_name}}
 Obsoletes: python2-%{pypi_name} < %{version}-%{release}
-%endif
 
-Requires:       python%{pyver}-pbr
+Requires:       python3-pbr
 Requires:       openstack-cinder >= 12.0.0
 Requires:       sudo
 
 BuildRequires:  git
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-pbr
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pbr
 BuildRequires:  openstack-cinder
 # Required for unit tests
-BuildRequires:    python%{pyver}-ddt
-BuildRequires:    python%{pyver}-os-testr
-BuildRequires:    python%{pyver}-oslotest
+BuildRequires:    python3-ddt
+BuildRequires:    python3-os-testr
+BuildRequires:    python3-oslotest
 
-%description -n python%{pyver}-%{pypi_name}
+%description -n python3-%{pypi_name}
 %{common_desc}
 
 %if 0%{?with_doc}
@@ -68,10 +55,10 @@ BuildRequires:    python%{pyver}-oslotest
 Summary:        Documentation for cinderlib
 
 BuildRequires:  graphviz
-BuildRequires:  python%{pyver}-sphinx
-BuildRequires:  python%{pyver}-openstackdocstheme
-BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
-BuildRequires:  python%{pyver}-sphinxcontrib-rsvgconverter
+BuildRequires:  python3-sphinx
+BuildRequires:  python3-openstackdocstheme
+BuildRequires:  python3-sphinxcontrib-apidoc
+BuildRequires:  python3-sphinxcontrib-rsvgconverter
 
 %description doc
 This package contains the documentation files for %{pypi_name}.
@@ -79,39 +66,39 @@ This package contains the documentation files for %{pypi_name}.
 %{common_desc}
 %endif
 
-%package -n python%{pyver}-%{pypi_name}-tests-unit
+%package -n python3-%{pypi_name}-tests-unit
 Summary:        Cinderlib unit tests
 
-Requires:    python%{pyver}-%{pypi_name}
-Requires:    python%{pyver}-ddt
-Requires:    python%{pyver}-os-testr
-Requires:    python%{pyver}-oslotest
+Requires:    python3-%{pypi_name}
+Requires:    python3-ddt
+Requires:    python3-os-testr
+Requires:    python3-oslotest
 
-%description -n python%{pyver}-%{pypi_name}-tests-unit
+%description -n python3-%{pypi_name}-tests-unit
 This package contains the unit tests for %{pypi_name}.
 
 %{common_desc}
 
-%package -n python%{pyver}-%{pypi_name}-tests-functional
+%package -n python3-%{pypi_name}-tests-functional
 Summary:        Cinderlib unit tests
 
-Requires:    python%{pyver}-%{pypi_name}
-Requires:    python%{pyver}-ddt
-Requires:    python%{pyver}-os-testr
-Requires:    python%{pyver}-oslotest
+Requires:    python3-%{pypi_name}
+Requires:    python3-ddt
+Requires:    python3-os-testr
+Requires:    python3-oslotest
 
-%description -n python%{pyver}-%{pypi_name}-tests-functional
+%description -n python3-%{pypi_name}-tests-functional
 This package contains the functional tests for %{pypi_name}.
 
 %{common_desc}
 
-%package -n python%{pyver}-%{pypi_name}-tests
+%package -n python3-%{pypi_name}-tests
 Summary:        All cinderlib tests
 
-Requires: python%{pyver}-%{pypi_name}-tests-unit
-Requires: python%{pyver}-%{pypi_name}-tests-functional
+Requires: python3-%{pypi_name}-tests-unit
+Requires: python3-%{pypi_name}-tests-functional
 
-%description -n python%{pyver}-%{pypi_name}-tests
+%description -n python3-%{pypi_name}-tests
 Virtual package for all %{pypi_name} tests.
 
 %prep
@@ -125,25 +112,25 @@ rm -rf {test-,}requirements.txt
 rm -rf devstack playbooks tools
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %if 0%{?with_doc}
 # generate html docs
-sphinx-build-%{pyver} -b html doc/source doc/build/html
+sphinx-build-3 -b html doc/source doc/build/html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %endif
 
 %check
-%{pyver_bin} -m unittest2 discover -v -s cinderlib/tests/unit
+python3 -m unittest2 discover -v -s cinderlib/tests/unit
 
 %install
-%{pyver_install}
+%{py3_install}
 
-%files -n python%{pyver}-%{pypi_name}
+%files -n python3-%{pypi_name}
 %license LICENSE
-%{pyver_sitelib}/cinderlib*
-%exclude %{pyver_sitelib}/%{pypi_name}/tests
+%{python3_sitelib}/cinderlib*
+%exclude %{python3_sitelib}/%{pypi_name}/tests
 
 %if 0%{?with_doc}
 %files doc
@@ -151,15 +138,15 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %doc doc/build/html
 %endif
 
-%files -n python%{pyver}-%{pypi_name}-tests-unit
+%files -n python3-%{pypi_name}-tests-unit
 %license LICENSE
-%{pyver_sitelib}/%{pypi_name}/tests/unit/*
+%{python3_sitelib}/%{pypi_name}/tests/unit/*
 
-%files -n python%{pyver}-%{pypi_name}-tests-functional
+%files -n python3-%{pypi_name}-tests-functional
 %license LICENSE
-%{pyver_sitelib}/%{pypi_name}/tests/functional/*
+%{python3_sitelib}/%{pypi_name}/tests/functional/*
 
-%files -n python%{pyver}-%{pypi_name}-tests
+%files -n python3-%{pypi_name}-tests
 %exclude /*
 
 %changelog
