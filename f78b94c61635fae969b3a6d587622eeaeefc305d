@@ -16,6 +16,24 @@
       "revId": "f78b94c61635fae969b3a6d587622eeaeefc305d",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52fedbcf_d820e679",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-04-21T14:42:15Z",
+      "side": 1,
+      "message": "this should be python2- only. btw pyver macros are cleaned up with https://review.rdoproject.org/r/#/c/26459/, so this needs to be rebased over other, also we are branching ussuri-rdo, so this needs to be cherry-picked to ussuri-rdo if branched before merging this.",
+      "parentUuid": "2778f8bb_84eefa77",
+      "revId": "f78b94c61635fae969b3a6d587622eeaeefc305d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
