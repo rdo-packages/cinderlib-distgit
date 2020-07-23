@@ -17,8 +17,8 @@ retyping, scheduling, backups, authorization, authentication, REST API, etc.
 
 Name:           python-%{pypi_name}
 Epoch:          1
-Version:        XXX
-Release:        XXX
+Version:        2.0.0
+Release:        1%{?dist}
 Summary:        %{common_summary}
 
 License:        ASL 2.0
@@ -150,3 +150,6 @@ python3 -m unittest2 discover -v -s cinderlib/tests/unit
 %exclude /*
 
 %changelog
+* Thu Jul 23 2020 RDO <dev@lists.rdoproject.org> 1:2.0.0-1
+- Update to 2.0.0
+
