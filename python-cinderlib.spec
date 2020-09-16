@@ -33,8 +33,9 @@ Summary:        %{common_summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 
+Requires:       python3-importlib-metadata >= 1.7.0
 Requires:       python3-pbr
-Requires:       openstack-cinder >= 12.0.0
+Requires:       openstack-cinder >= 15.0.0
 Requires:       sudo
 
 BuildRequires:  git
