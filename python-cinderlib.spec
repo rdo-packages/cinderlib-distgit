@@ -17,7 +17,7 @@ retyping, scheduling, backups, authorization, authentication, REST API, etc.
 
 Name:           python-%{pypi_name}
 Epoch:          1
-Version:        3.0.0
+Version:        3.1.0
 Release:        1%{?dist}
 Summary:        %{common_summary}
 
@@ -151,6 +151,9 @@ python3 -m unittest2 discover -v -s cinderlib/tests/unit
 %exclude /*
 
 %changelog
+* Mon Mar 08 2021 RDO <dev@lists.rdoproject.org> 1:3.1.0-1
+- Update to 3.1.0
+
 * Thu Jan 14 2021 RDO <dev@lists.rdoproject.org> 1:3.0.0-1
 - Update to 3.0.0
 
