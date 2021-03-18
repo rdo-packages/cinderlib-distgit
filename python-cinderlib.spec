@@ -48,7 +48,7 @@ Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 
 Requires:       python3-importlib-metadata >= 1.7.0
 Requires:       python3-pbr
-Requires:       python3-cinder-common >= 15.0.0
+Requires:       python3-cinder-common >= 17.0.0
 Requires:       sudo
 
 BuildRequires:  git-core
