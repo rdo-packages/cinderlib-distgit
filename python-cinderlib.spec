@@ -46,10 +46,12 @@ Summary:        %{common_summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 
-Requires:       python3-importlib-metadata >= 1.7.0
 Requires:       python3-pbr
 Requires:       python3-cinder-common >= 15.0.0
 Requires:       sudo
+%if 0%{?rhel} && 0%{?rhel} < 9
+Requires:       python3-importlib-metadata >= 1.7.0
+%endif
 
 BuildRequires:  git-core
 BuildRequires:  python3-devel
