@@ -60,7 +60,7 @@ BuildRequires:  python3-pbr
 BuildRequires:  python3-cinder-common
 # Required for unit tests
 BuildRequires:    python3-ddt
-BuildRequires:    python3-os-testr
+BuildRequires:    python3-stestr
 BuildRequires:    python3-oslotest
 
 %description -n python3-%{pypi_name}
@@ -142,7 +142,7 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %endif
 
 %check
-python3 -m unittest2 discover -v -s cinderlib/tests/unit
+stestr run
 
 %install
 %{py3_install}
