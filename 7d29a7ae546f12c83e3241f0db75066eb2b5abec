@@ -1,0 +1,9 @@
+Code-Review+2: Gorka Eguileor <geguileo@redhat.com>
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Workflow+1: Javier Peña <jpena@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 13 May 2021 08:51:13 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/cinderlib-distgit/+/33707
+Project: openstack/cinderlib-distgit
+Branch: refs/heads/rpm-master
