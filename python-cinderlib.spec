@@ -170,3 +170,4 @@ stestr run
 %exclude /*
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/cinderlib/commit/40b290fd5890f2f8d16480f6875f3d41113a8588
