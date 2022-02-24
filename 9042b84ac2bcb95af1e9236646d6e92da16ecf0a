@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd3ec9a4_fdf63d91",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-02-24T12:01:25Z",
+      "side": 1,
+      "message": "Requires of main package [1]",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 6
+      },
+      "revId": "9042b84ac2bcb95af1e9236646d6e92da16ecf0a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb7dd256_92d1b86b",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-02-24T12:01:25Z",
+      "side": 1,
+      "message": "sorry I didn\u0027t see earlier this was added in python3-%{pypi_name}-tests-unit subpackage.\nAs it\u0027s in requirements.txt, it should be Requires in main package (i.e %package -n python3-%{pypi_name} l.44) see [1].",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 38
+      },
+      "revId": "9042b84ac2bcb95af1e9236646d6e92da16ecf0a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
