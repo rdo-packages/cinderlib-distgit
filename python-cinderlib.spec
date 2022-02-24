@@ -47,7 +47,8 @@ Summary:        %{common_summary}
 Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 
 Requires:       python3-pbr
-Requires:       python3-cinder-common >= 17.0.0
+Requires:       python3-cinder-common >= 19.0.0
+Requires:       python3-os-brick >= 5.1.0
 Requires:       sudo
 %if 0%{?rhel} && 0%{?rhel} < 9
 Requires:       python3-importlib-metadata >= 1.7.0
@@ -58,6 +59,8 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 BuildRequires:  python3-cinder-common
+BuildRequires:  python3-os-brick
+
 # Required for unit tests
 BuildRequires:    python3-ddt
 BuildRequires:    python3-stestr
