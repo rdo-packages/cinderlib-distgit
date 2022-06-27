@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global with_doc 1
@@ -19,7 +19,7 @@ retyping, scheduling, backups, authorization, authentication, REST API, etc.
 
 Name:           python-%{pypi_name}
 Epoch:          1
-Version:        4.1.0
+Version:        4.2.0
 Release:        1%{?dist}
 Summary:        %{common_summary}
 
@@ -173,6 +173,9 @@ stestr run
 %exclude /*
 
 %changelog
+* Mon Jun 27 2022 RDO <dev@lists.rdoproject.org> 1:4.2.0-1
+- Update to 4.2.0
+
 * Tue Apr 05 2022 RDO <dev@lists.rdoproject.org> 1:4.1.0-1
 - Update to 4.1.0
 
