@@ -173,3 +173,4 @@ stestr run
 * Mon Dec 13 2021 RDO <dev@lists.rdoproject.org> 1:4.1.0-1
 - Update to 4.1.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/cinderlib/commit/4fc56c815b0e9e4d3706dca14bbe54fbb4866272
