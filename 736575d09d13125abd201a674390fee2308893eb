@@ -22,6 +22,30 @@
       },
       "revId": "736575d09d13125abd201a674390fee2308893eb",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f68fd67b_466d0b11",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 141
+      },
+      "writtenOn": "2022-06-27T09:45:36Z",
+      "side": 1,
+      "message": "But when we deploy all the scripts from the RPM package, we don\u0027t deal with virtualenvs anymore, or do we?",
+      "parentUuid": "79c24dcb_d1a566ec",
+      "range": {
+        "startLine": 157,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 92
+      },
+      "revId": "736575d09d13125abd201a674390fee2308893eb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
