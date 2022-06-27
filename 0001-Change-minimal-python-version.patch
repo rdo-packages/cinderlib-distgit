@@ -1,0 +1,25 @@
+From 82544f3ec8da024e95069a961d1cdc9e3c670746 Mon Sep 17 00:00:00 2001
+From: Joel Capitao <jcapitao@redhat.com>
+Date: Wed, 29 Jun 2022 11:38:59 +0200
+Subject: [PATCH] Change minimal python version
+
+---
+ cinderlib/cinderlib.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cinderlib/cinderlib.py b/cinderlib/cinderlib.py
+index dd40b66..bdf01b4 100644
+--- a/cinderlib/cinderlib.py
++++ b/cinderlib/cinderlib.py
+@@ -414,7 +414,7 @@ class Backend(object):
+             # Can only use importlib.resources on 3.10 because it was added to
+             # 3.7, but files to 3.9 and namespace packages only to 3.10
+             import sys
+-            if sys.version_info[:2] > (3, 10):
++            if sys.version_info[:2] > (3, 7):
+                 from importlib.resources import files
+             else:
+                 from importlib_resources import files
+-- 
+2.35.3
+
