@@ -60,6 +60,7 @@ BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 BuildRequires:  python3-cinder-common
 BuildRequires:  python3-os-brick
+BuildRequires:  /usr/bin/pathfix.py
 
 # Required for unit tests
 BuildRequires:    python3-ddt
@@ -152,6 +153,9 @@ stestr run | true
 
 %install
 %{py3_install}
+
+# Fix ambiguous shebangs
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_bindir}/venv-privsep-helper
 
 %files -n python3-%{pypi_name}
 %license LICENSE
