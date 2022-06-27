@@ -70,6 +70,30 @@
       },
       "revId": "736575d09d13125abd201a674390fee2308893eb",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ab0b1bf_de52c858",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2022-06-27T13:45:41Z",
+      "side": 1,
+      "message": "When deploying cinderlib from RPM there are fewer number of cases where the venv is relevant, but there could be some.\n\nAs an example:\n\n- We have cinderlib installed from RPM (which pulls cinder and os-brick from RPMs as well)\n- We find there are some issues with os-brick on the system\n- We create a virtual environment with \"--system-site-packages\"\n- We install a specific os-brick version from pypi/git in the venv\n- We run cinderlib within the venv\n\nIn that scenario if we don\u0027t have the original \"venv-privsep-helper\" script the privsep library will use the system os-brick package instead of the one in the venv.\n\nThis is definitely a corner case for RPM installations, and the best solutions would be to make the rpm build not run \"brp-mangle-shebangs\" on that file, but I don\u0027t think it would be the end of the world if that functionality is broken in the RPM.",
+      "parentUuid": "96747f9e_5b3d3a1a",
+      "range": {
+        "startLine": 157,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 92
+      },
+      "revId": "736575d09d13125abd201a674390fee2308893eb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
