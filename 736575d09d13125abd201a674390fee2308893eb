@@ -46,6 +46,30 @@
       },
       "revId": "736575d09d13125abd201a674390fee2308893eb",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96747f9e_5b3d3a1a",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-06-27T11:44:51Z",
+      "side": 1,
+      "message": "i was about to ask the same, when using rpms, are we using venv?",
+      "parentUuid": "f68fd67b_466d0b11",
+      "range": {
+        "startLine": 157,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 92
+      },
+      "revId": "736575d09d13125abd201a674390fee2308893eb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
