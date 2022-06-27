@@ -126,6 +126,7 @@ Virtual package for all %{pypi_name} tests.
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
+sed -i '0,/python/s//python3/' cinderlib/bin/venv-privsep-helper
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 # Remove the requirements file so that pbr hooks don't add its requirements
