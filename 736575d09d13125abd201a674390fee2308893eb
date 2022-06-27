@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79c24dcb_d1a566ec",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 181
+      },
+      "writtenOn": "2022-06-27T09:03:13Z",
+      "side": 1,
+      "message": "The whole point of the venv-privsep-helper is to use the virtual environment interpreter and not the one from the system.  That\u0027s how it will ensure it uses the virtual environment packages.\n\nIt\u0027s true that the shebang could be change from \n\n  #!/usr/bin/env python\n\nto\n\n  #!/usr/bin/env python3\n\nBut it really needs to use the right venv interpreter.",
+      "range": {
+        "startLine": 157,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 92
+      },
+      "revId": "736575d09d13125abd201a674390fee2308893eb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
