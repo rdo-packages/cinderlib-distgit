@@ -50,6 +50,24 @@
       "message": "\u003e Patch Set 5: Verified-2\n\u003e \n\u003e Build failed (gate pipeline).  For information on how to proceed, see\n\u003e http://docs.openstack.org/infra/manual/developers.html#automated-testing\n\u003e \n\u003e \n\u003e \n\u003e Warning:\n\u003e   Change 43771 in project rdo-jobs does not share a change queue with 43730 in project openstack/cinderlib-distgit\n\nwhaaaat? O.o",
       "revId": "71ff3edf21192887dd578b304695ce34dcaa6c2d",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51ae06e1_be2d814c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 141
+      },
+      "writtenOn": "2022-06-28T15:26:34Z",
+      "side": 1,
+      "message": "Oh, ok, we just need to merge https://review.rdoproject.org/r/c/rdo-jobs/+/43771/",
+      "parentUuid": "a7a9562f_0d775706",
+      "revId": "71ff3edf21192887dd578b304695ce34dcaa6c2d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
