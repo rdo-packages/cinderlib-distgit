@@ -63,6 +63,30 @@
       },
       "revId": "a595baa493a9ea9c34552d4db0282f894d3fd0c8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ac64165_337deda8",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-06-28T10:00:03Z",
+      "side": 1,
+      "message": "Ok, I saw the macro in doc but thought we could only set it globally and I didn\u0027t want to do that way. It should be good now.",
+      "parentUuid": "9a65c849_0ac7b0d9",
+      "range": {
+        "startLine": 129,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 1
+      },
+      "revId": "a595baa493a9ea9c34552d4db0282f894d3fd0c8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
