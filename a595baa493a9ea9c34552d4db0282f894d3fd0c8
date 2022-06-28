@@ -16,6 +16,29 @@
       "message": "Gorka?",
       "revId": "a595baa493a9ea9c34552d4db0282f894d3fd0c8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47d9e0c1_bdf5a679",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-06-28T08:25:55Z",
+      "side": 1,
+      "message": "note this is setting as shebang:\n\n#!/usr/bin/python3\n\nWhich is what we want to avoid according to the conversation with Gorka.\n\nIf we want the brp-mangle-shebangs script to ignore a specific script we can use __brp_mangle_shebangs_exclude macro, so i guess adding:\n\n%global __brp_mangle_shebangs_exclude .*venv-privsep-helper$\n\nWill do what we need.",
+      "range": {
+        "startLine": 129,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 1
+      },
+      "revId": "a595baa493a9ea9c34552d4db0282f894d3fd0c8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
