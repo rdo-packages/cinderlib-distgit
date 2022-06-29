@@ -54,6 +54,7 @@ Requires:       sudo
 %if 0%{?rhel} && 0%{?rhel} < 9
 Requires:       python3-importlib-metadata >= 1.7.0
 %endif
+Requires:       python3-importlib-resources
 
 BuildRequires:  git-core
 BuildRequires:  python3-devel
@@ -61,6 +62,7 @@ BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 BuildRequires:  python3-cinder-common
 BuildRequires:  python3-os-brick
+BuildRequires:  python3-importlib-resources
 
 # Required for unit tests
 BuildRequires:    python3-ddt
