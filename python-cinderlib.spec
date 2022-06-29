@@ -14,6 +14,7 @@
 %global with_doc 1
 
 %global pypi_name cinderlib
+%global __brp_mangle_shebangs_exclude_from ^%{python3_sitelib}/cinderlib/bin/venv-privsep-helper$
 %global common_summary Python library for direct usage of Cinder drivers without the services
 %global common_desc \
 The Cinder Library, also known as cinderlib, is a Python library that leverages \
@@ -59,6 +60,8 @@ BuildRequires:  openstack-cinder
 BuildRequires:    python%{pyver}-ddt
 BuildRequires:    python%{pyver}-os-testr
 BuildRequires:    python%{pyver}-oslotest
+BuildRequires:    python%{pyver}-importlib-resources
+
 
 %description -n python%{pyver}-%{pypi_name}
 %{common_desc}
