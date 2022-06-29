@@ -53,6 +53,7 @@ Requires:       python3-os-brick >= 5.1.0
 Requires:       sudo
 %if 0%{?rhel} && 0%{?rhel} < 9
 Requires:       python3-importlib-metadata >= 1.7.0
+Requires:       python3-importlib-resources
 %endif
 
 BuildRequires:  git-core
@@ -61,6 +62,10 @@ BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 BuildRequires:  python3-cinder-common
 BuildRequires:  python3-os-brick
+
+%if 0%{?rhel} && 0%{?rhel} < 9
+BuildRequires:  python3-importlib-resources
+%endif
 
 # Required for unit tests
 BuildRequires:    python3-ddt
@@ -146,10 +151,14 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %endif
 
 %check
-# (TODO) current master branch is for Yoga development and not compatible with
-# cinder from zed. Ignoring unit tests errors until yoga version is released and
-# master branch fixed
-stestr run | true
+%if 0%{?rhel} && 0%{?rhel} < 9
+stestr run
+%else
+# Currently, we don't ship importlib-resources for CS9, needed by the
+# venv-privsep-helper script. This script aims to address issues that
+# RDO doesn't hit, so we can simply ignore its failing unit tests.
+stestr run --black-regex '^.*test__set_priv_helper_venv*'
+%endif
 
 %install
 %{py3_install}
