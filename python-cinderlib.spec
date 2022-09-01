@@ -48,8 +48,8 @@ Summary:        %{common_summary}
 Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 
 Requires:       python3-pbr
-Requires:       python3-cinder-common >= 19.0.0
-Requires:       python3-os-brick >= 5.1.0
+Requires:       python3-cinder-common >= 20.0.0.0
+Requires:       python3-os-brick >= 5.2.0
 Requires:       sudo
 %if 0%{?rhel} && 0%{?rhel} < 9
 Requires:       python3-importlib-metadata >= 1.7.0
