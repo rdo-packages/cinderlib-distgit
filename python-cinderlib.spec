@@ -156,3 +156,4 @@ python3 -m unittest2 discover -v -s cinderlib/tests/unit
 * Thu Jul 23 2020 RDO <dev@lists.rdoproject.org> 1:2.0.0-1
 - Update to 2.0.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/cinderlib/commit/2715218e2b6f7d356e6cde5a33ccf8c85bea3f63
