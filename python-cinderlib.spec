@@ -169,3 +169,4 @@ rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 * Thu Dec 12 2019 RDO <dev@lists.rdoproject.org> 1:1.0.0-1
 - Update to 1.0.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/cinderlib/commit/2715218e2b6f7d356e6cde5a33ccf8c85bea3f63
