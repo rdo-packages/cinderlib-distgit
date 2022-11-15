@@ -156,3 +156,4 @@ python3 -m unittest2 discover -v -s cinderlib/tests/unit
 * Thu Jul 23 2020 RDO <dev@lists.rdoproject.org> 1:2.0.0-1
 - Update to 2.0.0
 
+
