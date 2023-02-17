@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2eb241d_e3e5f73d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-02-17T09:29:43Z",
+      "side": 1,
+      "message": "cinderlib usually release late in the cycle, let\u0027s keep it on hold por a while",
+      "revId": "e2d44d634a5c194848e2f64801ff374d1fe91ac8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
