@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9287dd8_02cc2d07",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-02-17T08:17:29Z",
+      "side": 1,
+      "message": "we have to remove this condition as upstream remove the restriction to py\u003c38 in December https://review.opendev.org/c/openstack/cinderlib/+/844981",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 12
+      },
+      "revId": "a6b83033f2cc609235499711b4f4e2a8906e360e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
