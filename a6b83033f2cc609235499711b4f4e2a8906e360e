@@ -22,6 +22,30 @@
       },
       "revId": "a6b83033f2cc609235499711b4f4e2a8906e360e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "293b7a88_6ab3794e",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-02-17T08:48:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f9287dd8_02cc2d07",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 12
+      },
+      "revId": "a6b83033f2cc609235499711b4f4e2a8906e360e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
