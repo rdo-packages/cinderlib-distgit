@@ -1,6 +1,15 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some runtime reqs from automatic generator
+# importlib_resources is only used by venv functionality not used when installing from rpm
+%global excluded_reqs importlib_resources
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order os-api-ref
+# Exclude sphinx from BRs if docs are disabled
+%if ! 0%{?with_doc}
+%global excluded_brs %{excluded_brs} sphinx openstackdocstheme
+%endif
 
 %global with_doc 1
 
@@ -24,9 +33,11 @@ Version:        XXX
 Release:        XXX
 Summary:        %{common_summary}
 
-License:        ASL 2.0
+License:        Apache-2.0
 URL:            https://docs.openstack.org/cinderlib/latest/
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
+# We need to patch tox.ini to make pyproject tox based macros work fine
+Patch01:        0001-Adapt-tox.ini-for-pyproject-macros.patch
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz.asc
@@ -44,26 +55,11 @@ BuildRequires:  openstack-macros
 
 %package -n python3-%{pypi_name}
 Summary:        %{common_summary}
-%{?python_provide:%python_provide python3-%{pypi_name}}
-Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 
-Requires:       python3-pbr
-Requires:       python3-cinder-common >= 21.0.0.0
-Requires:       python3-os-brick >= 6.1.0
 Requires:       sudo
-Requires:       python3-importlib-metadata >= 1.7.0
-
 BuildRequires:  git-core
 BuildRequires:  python3-devel
-BuildRequires:  python3-setuptools
-BuildRequires:  python3-pbr
-BuildRequires:  python3-cinder-common
-BuildRequires:  python3-os-brick
-
-# Required for unit tests
-BuildRequires:    python3-ddt
-BuildRequires:    python3-stestr
-BuildRequires:    python3-oslotest
+BuildRequires:  pyproject-rpm-macros
 
 %description -n python3-%{pypi_name}
 %{common_desc}
@@ -73,11 +69,6 @@ BuildRequires:    python3-oslotest
 Summary:        Documentation for cinderlib
 
 BuildRequires:  graphviz
-BuildRequires:  python3-sphinx
-BuildRequires:  python3-openstackdocstheme
-BuildRequires:  python3-sphinxcontrib-apidoc
-BuildRequires:  python3-sphinxcontrib-rsvgconverter
-
 %description doc
 This package contains the documentation files for %{pypi_name}.
 
@@ -87,6 +78,7 @@ This package contains the documentation files for %{pypi_name}.
 %package -n python3-%{pypi_name}-tests-unit
 Summary:        Cinderlib unit tests
 
+# Keep manual requirements in tests subpackages for now
 Requires:    python3-%{pypi_name}
 Requires:    python3-ddt
 Requires:    python3-os-testr
@@ -100,6 +92,7 @@ This package contains the unit tests for %{pypi_name}.
 %package -n python3-%{pypi_name}-tests-functional
 Summary:        Cinderlib unit tests
 
+# Keep manual requirements in tests subpackages for now
 Requires:    python3-%{pypi_name}
 Requires:    python3-ddt
 Requires:    python3-os-testr
@@ -127,30 +120,51 @@ Virtual package for all %{pypi_name} tests.
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
-# Remove the requirements file so that pbr hooks don't add its requirements
-rm -rf {test-,}requirements.txt
 
 # Remove the devstack plugin, gate playbooks, and CI tools
 rm -rf devstack playbooks tools
 
+sed -i /.*-c{env:TOX_CONSTRAINTS_FILE.*/d tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs};do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+# Automatic BR generation
+# Exclude some bad-known runtime reqs
+for pkg in %{excluded_reqs}; do
+  sed -i /^${pkg}.*/d requirements.txt
+done
+
+%generate_buildrequires
+%if 0%{?with_doc}
+  %pyproject_buildrequires -t -e %{default_toxenv},docs
+%else
+  %pyproject_buildrequires -t -e %{default_toxenv}
+%endif
+
 %build
-%{py3_build}
+%pyproject_wheel
 
 %if 0%{?with_doc}
 # generate html docs
-sphinx-build-3 -b html doc/source doc/build/html
+%tox -e docs
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/{.doctrees,.buildinfo,.placeholder,_sources}
 %endif
 
 %check
-# (TODO) current master branch is for Yoga development and not compatible with
-# cinder from zed. Ignoring unit tests errors until yoga version is released and
-# master branch fixed
-stestr run | true
+%tox -e %{default_toxenv}
 
 %install
-%{py3_install}
+%pyproject_install
 
 %files -n python3-%{pypi_name}
 %license LICENSE
