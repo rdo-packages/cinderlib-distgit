@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc2d6675_796ef4b7",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-07-18T10:51:28Z",
+      "side": 1,
+      "message": "I\u0027d keep comment why unit tests are blocked",
+      "revId": "68fb8fe5416a231e2dea77b54595b3188f7af035",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
