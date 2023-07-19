@@ -16,6 +16,24 @@
       "message": "I\u0027d keep comment why unit tests are blocked",
       "revId": "68fb8fe5416a231e2dea77b54595b3188f7af035",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4dc34c1_33985e64",
+        "filename": "python-cinderlib.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-07-19T16:38:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc2d6675_796ef4b7",
+      "revId": "68fb8fe5416a231e2dea77b54595b3188f7af035",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
