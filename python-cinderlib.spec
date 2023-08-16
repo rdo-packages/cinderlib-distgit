@@ -195,3 +195,4 @@ stestr run --exclude-regex "(.*set_priv_helper_venv.*)"
 %exclude /*
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/cinderlib/commit/fb6178197fe75369026a21fbce92a384eaf97944
