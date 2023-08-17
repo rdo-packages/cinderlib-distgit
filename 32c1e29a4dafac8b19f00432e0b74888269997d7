@@ -16,6 +16,24 @@
       "message": "I\u0027m not sure I\u0027m looking in the right place, but in mock.log [0], I see this:\n\nDEBUG: No matching package to install: \u0027python3dist(tooz[etcd3gw]) \u003e\u003d 2.8\u0027\n\nwhich makes me wonder if the tooling doesn\u0027t understand the \"extras\" part of the python requirement?\n\nI added tooz[etcd3gw] to cinderlib\u0027s test-requirements.txt upstream because we started getting ModuleNotFound errors for etcd3gw from tooz when running one of the *cinder* CI jobs that includes the cinderlib functional tests after it runs a bunch of tempest tests.  So may actually need to do nothing downstream for this.  Forgive my ignorance, but is there a way we can just skip this change for RDO?\n\n[0] https://trunk.rdoproject.org/centos9-master/component/cinder/fb/61/fb6178197fe75369026a21fbce92a384eaf97944_2d675940/mock.log",
       "revId": "32c1e29a4dafac8b19f00432e0b74888269997d7",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f18628d0_aa57f00e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-08-17T06:16:47Z",
+      "side": 1,
+      "message": "Hi Brian, thanks for checking.\n\nYou are looking at the right place, the problem is that dnf can not resolve the new Build requirement added automatically based on test-requirements.txt. However the actual problem is that tooz is not providing a subpackage for the etcd3gw extra https://docs.fedoraproject.org/en-US/packaging-guidelines/Python/#Extras .\n\nWe have two options:\n\n1. Adding the extra to tooz using %pyproject_extras_subpkg macro in tooz spec.\n2. excluding tooz[etcd3gw] from the automatic dependencies using exclude_brs macron in cinderlib spec https://github.com/rdo-packages/cinderlib-distgit/blob/rpm-master/python-cinderlib.spec#L8\n\nIn this case, I\u0027ll send a patch for 1 so that we provide that extra in case some other package requires it.",
+      "parentUuid": "633ca7ee_d9860b96",
+      "revId": "32c1e29a4dafac8b19f00432e0b74888269997d7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
