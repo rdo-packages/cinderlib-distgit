@@ -25,8 +25,8 @@ index 5579cf6..666674a 100644
  # NOTE: Functional tests may fail if host is missing bindeps from deps projects
  deps =
      -r{toxinidir}/test-requirements.txt
--    git+https://opendev.org/openstack/os-brick@stable/2023.1
--    git+https://opendev.org/openstack/cinder@stable/2023.1
+-    git+https://opendev.org/openstack/os-brick
+-    git+https://opendev.org/openstack/cinder
  
  commands =
      find . -ignore_readdir_race -type f -name "*.pyc" -delete
@@ -62,7 +62,7 @@ index 5579cf6..666674a 100644
  # yes, we want the constraint in the install_command, not deps, so that
  # https://review.opendev.org/c/openstack/glance/+/839786 does not happen
 -# to us
--install_command = python -m pip install -c{env:TOX_CONSTRAINTS_FILE:https://releases.openstack.org/constraints/upper/2023.1} {opts} {packages}
+-install_command = python -m pip install -c{env:TOX_CONSTRAINTS_FILE:https://releases.openstack.org/constraints/upper/2023.2} {opts} {packages}
  deps =
    -r{toxinidir}/doc/requirements.txt
  commands =
