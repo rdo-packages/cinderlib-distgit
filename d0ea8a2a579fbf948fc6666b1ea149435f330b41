@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de63dce9_5354f935",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-10-20T07:54:06Z",
+      "side": 1,
+      "message": "fix in https://review.rdoproject.org/r/c/openstack/cinderlib-distgit/+/49980",
+      "revId": "d0ea8a2a579fbf948fc6666b1ea149435f330b41",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
