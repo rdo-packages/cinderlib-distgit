@@ -191,3 +191,4 @@ stestr run --exclude-regex '^.*test__set_priv_helper_venv*'
 * Tue Apr 05 2022 RDO <dev@lists.rdoproject.org> 1:4.1.0-1
 - Update to 4.1.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/cinderlib/commit/47914d29c30daaaf8ca79752cd019c4a65d88ef7
